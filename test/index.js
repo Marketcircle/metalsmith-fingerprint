@@ -8,7 +8,7 @@ describe('metalsmith-fingerprint', function () {
         (new Metalsmith('test/fixtures/basic'))
             .use(fingerprint({ pattern: 'hello.txt' }))
             .use(function (files, metalsmith, done) {
-                metalsmith.metadata().fingerprint['hello.txt'].should.equal('hello-22fd426562ac8a95a381a563d22ed04d.txt')
+                metalsmith.metadata().fingerprint['hello.txt'].should.equal('hello-0933ec0a4398386c8fc86d4a663cd92a67f52f83fdc8bdef1640a4246ac56fcf.txt')
                 return process.nextTick(done)
             })
             .build(function (err) {
